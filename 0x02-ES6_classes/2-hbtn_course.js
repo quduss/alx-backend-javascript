@@ -10,15 +10,16 @@ export default class HolbertonCourse {
    * @param {String[]} students - The names of students in the course.
    */
   constructor(name, length, students) {
-    this.name = name
-    this.length = length
-    this.students = students
+    this.name = name;
+    this.length = length;
+    this.students = students;
   }
 
   /**
    * Gets the name of this course.
    */
   get name() {
+    // eslint-disable-next-line no-underscore-dangle
     return this._name;
   }
 
@@ -29,6 +30,7 @@ export default class HolbertonCourse {
     if (typeof value !== 'string') {
       throw new TypeError('Name must be a string');
     }
+    // eslint-disable-next-line no-underscore-dangle
     this._name = value;
   }
 
@@ -36,6 +38,7 @@ export default class HolbertonCourse {
    * Gets the length of this course (in months).
    */
   get length() {
+    // eslint-disable-next-line no-underscore-dangle
     return this._length;
   }
 
@@ -46,6 +49,7 @@ export default class HolbertonCourse {
     if (typeof value !== 'number') {
       throw new TypeError('Length must be a number');
     }
+    // eslint-disable-next-line no-underscore-dangle
     this._length = value;
   }
 
@@ -53,6 +57,7 @@ export default class HolbertonCourse {
    * Gets the names of students in this course.
    */
   get students() {
+    // eslint-disable-next-line no-underscore-dangle
     return this._students;
   }
 
@@ -66,7 +71,7 @@ export default class HolbertonCourse {
     if (!value.every((student) => typeof student === 'string')) {
       throw new TypeError('Students must be an array of strings');
     }
+    // eslint-disable-next-line no-underscore-dangle
     this._students = value;
   }
 }
-

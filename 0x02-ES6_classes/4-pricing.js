@@ -1,5 +1,3 @@
-import Currency from './3-currency';
-
 export default class Pricing {
   constructor(amount, currency) {
     this.amount = amount;
@@ -7,10 +5,12 @@ export default class Pricing {
   }
 
   get amount() {
+    // eslint-disable-next-line no-underscore-dangle
     return this._amount;
   }
 
   set amount(value) {
+    // eslint-disable-next-line no-underscore-dangle
     this._amount = value;
   }
 
@@ -18,6 +18,7 @@ export default class Pricing {
    * @returns {Currency}
    */
   get currency() {
+    // eslint-disable-next-line no-underscore-dangle
     return this._currency;
   }
 
@@ -25,6 +26,7 @@ export default class Pricing {
    * @param {Currency} value
    */
   set currency(value) {
+    // eslint-disable-next-line no-underscore-dangle
     this._currency = value;
   }
 
